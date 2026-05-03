@@ -1,1 +1,33 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --border-radius: 10px;
+
+  --font-reading: Georgia, 'Times New Roman', Times, serif;
+  --font-heading: 'Inter', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+
+  --background-color: white;
+  --secondary-color: #f25f4c;
+  --headline-color: black;
+  --text-color: black;
+  --accent-color: #f9bc60;
+  --accent-text-color: #001e1d;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-color);
+}
+
+* {
+  font-family: var(--font-reading), serif;
+  line-height: 1.6;
+  font-weight: 400;
+  color: var(--text-color);
+}
+
+title, h1, h2, h3, h4, footer {
+  font-family: var(--font-heading), sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--headline-color);
+}

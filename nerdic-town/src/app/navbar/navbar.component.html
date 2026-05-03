@@ -1,0 +1,17 @@
+<div id="navbar-wrapper">
+  <h1>NERDIC TOWN</h1>
+  <button routerLinkActive="active-btn" (click)="toggleMenu()" id="login-btn">
+    @if (authService.isLoggedIn()) {
+      {{ authService.currentUser()?.role }}
+    }
+    <i data-feather="user"></i>
+  </button>
+  @if (menuOpen) {
+    <div id="menu">
+      <button (click)="logout()">Logout</button>
+    </div>
+  }
+  @if (router.url !== "/home") {
+    <button id="back-btn" routerLinkActive="active-btn" routerLink="/home"><i data-feather="arrow-left"></i></button>
+  }
+</div>

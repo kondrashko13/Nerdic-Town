@@ -1,0 +1,33 @@
+<div id="login-wrapper">
+  <div id="login-card-wrapper">
+    <div id="login-name-wrapper">
+      <h2>{{ isLoginMode ? 'Login' : 'Register' }}</h2>
+    </div>
+
+    <div id="login-form-wrapper">
+      <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <div>
+          <label>Email</label>
+          <input type="email" formControlName="email"/>
+        </div>
+
+        <div>
+          <label>Password</label>
+          <input type="password" formControlName="password"/>
+        </div>
+
+        @if (!isLoginMode) {
+          <div>
+            <label>Confirm Password</label>
+            <input type="password" formControlName="confirmPassword"/>
+          </div>
+        }
+
+        <button id="login-submit-button" type="submit" [disabled]="form.invalid">
+          {{ isLoginMode ? 'Login' : 'Register' }}
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+

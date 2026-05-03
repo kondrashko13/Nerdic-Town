@@ -1,0 +1,8 @@
+<div id="boardgame-list-wrapper">
+  <h1>Boardgames</h1>
+  <div id="boardgame-cards-wrapper">
+    @for(boardgame of boardgameService.boardgames(); track $index) {
+      <app-boardgame-card [game]="boardgame"></app-boardgame-card>
+    }
+  </div>
+</div>

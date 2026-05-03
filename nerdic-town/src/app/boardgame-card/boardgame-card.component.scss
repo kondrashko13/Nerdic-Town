@@ -1,0 +1,46 @@
+$card-border-radius: var(--border-radius);
+
+:host {
+  display: contents;
+}
+
+#game-card-wrapper {
+  background-color: var(--accent-color);
+  border-radius: $card-border-radius;
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: span 3;
+  grid-row-gap: 0.5rem;
+  padding-bottom: 0.5rem;
+  border: 3px solid var(--accent-color);
+}
+
+#game-image-wrapper {
+  width: 100%;
+  aspect-ratio: 1/1;
+  overflow: hidden;
+  border-radius: $card-border-radius $card-border-radius 0 0;
+  background-color: white;
+}
+
+#game-image-wrapper img {
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  aspect-ratio: 1/1;
+}
+
+#game-name, #game-price {
+  margin: 0;
+  padding: 0 1rem;
+}
+
+#game-name {
+  font-size: 1.25rem;
+  color: black;
+}
+
+#game-price {
+  text-align: right;
+  font-size: 1rem;
+}

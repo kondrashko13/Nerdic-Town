@@ -1,0 +1,32 @@
+@if (authService.isLoggedIn()) {
+  <div id="cart-wrapper">
+    <h2>Cart</h2>
+    @for (item of userService.userProfile()?.cart; track $index) {
+      <div class="item-wrapper">
+        <div class="item-info">
+          <h3 class="item-name">{{ item.productId.name }}</h3>
+          <p class="item-price">2000 UAH</p>
+        </div>
+        <div class="item-controls">
+          <button class="plus"><i data-feather="plus"></i></button>
+          <p class="quantity">{{ item.quantity }}</p>
+          <button class="minus"><i data-feather="minus"></i></button>
+        </div>
+      </div>
+    }
+    @if (!userService.userProfile()?.cart?.length) {
+      <div class="item-wrapper">
+        <div class="item-info">
+          <h3>Catan</h3>
+          <p>2000 UAH</p>
+        </div>
+        <div class="item-controls">
+          <button><i data-feather="plus"></i></button>
+          <p>0</p>
+          <button><i data-feather="minus"></i></button>
+        </div>
+      </div>
+    }
+  </div>
+}
+

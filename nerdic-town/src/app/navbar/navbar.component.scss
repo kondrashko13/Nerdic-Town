@@ -1,0 +1,88 @@
+:host {
+  background-color: var(--accent-color);
+  height: 5rem;
+  position: relative;
+}
+
+h1 {
+  background-color: var(--secondary-color);
+  border-radius: var(--border-radius);
+  line-height: 4.5rem;
+  padding: 0.2rem 1.2rem;
+  text-align: center;
+  font-size: 4.5rem;
+  position: absolute;
+  text-wrap: nowrap;
+  margin: 0;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+#navbar-wrapper {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+
+button {
+  margin: 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: none;
+  color: var(--headline-color);
+  transition: 200ms ease-out;
+  font-size: 1.2rem;
+
+
+  &:hover {
+    cursor: pointer;
+    color: var(--secondary-color);
+
+    & svg {
+      stroke: var(--secondary-color);
+    }
+  }
+
+  & svg {
+    width: 2rem;
+    height: 2rem;
+    stroke: var(--headline-color);
+    transition: 200ms ease-out;
+    margin-left: 0.3rem;
+  }
+}
+
+button.active-btn {
+  cursor: default;
+  color: var(--secondary-color);
+  & svg {
+    stroke: var(--secondary-color);
+  }
+}
+
+#login-btn {
+  anchor-name: --profile;
+  position: relative;
+}
+
+#menu {
+  position: absolute;
+  position-anchor: --profile;
+  top: anchor(bottom);
+  left: anchor(left);
+  transform: translateX(-50%);
+
+  margin-top: 0.5rem;
+
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 0.5rem;
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
